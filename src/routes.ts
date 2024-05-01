@@ -1,7 +1,7 @@
 import { Request, Response, Router } from 'express';
-import FactoryController from './factory-method/index';
-import AbstractFactoryController from './abstract-factory/index';
-import AdapterController from './adapter/index';
+import FactoryController from './Creational patterns/factory-method/index';
+import AbstractFactoryController from './Creational patterns/abstract-factory/index';
+import AdapterController from './Structural patterns/adapter/index';
 
 const routes = Router();
 
