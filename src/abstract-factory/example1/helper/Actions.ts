@@ -40,7 +40,6 @@ function executeAction(action: ActionTypes, usaArmy: ArmyFactory, russianArmy: A
     return { unit, message };
 }
 
-
 function simulateAttack(unit: Soldier | Tank | Plane): void {
     unit.attack();
 }
