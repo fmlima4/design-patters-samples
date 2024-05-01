@@ -1,4 +1,4 @@
-import { OldCalculator } from '../interface/OldCalculator';
+import { OldCalculator } from '../interfaces/OldCalculator';
 import { NewCalculator } from '../services/NewCAlculator';
 
 class NewCalculatorAdapter implements OldCalculator {

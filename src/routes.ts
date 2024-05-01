@@ -1,7 +1,8 @@
 import { Request, Response, Router } from 'express';
 import FactoryController from './Creational patterns/factory-method/index';
 import AbstractFactoryController from './Creational patterns/abstract-factory/index';
-import AdapterController from './Structural patterns/adapter/index';
+import { CalculatorController } from './Structural patterns/adapter/example1/controllers/CalculatorController';
+import { LogController } from './Structural patterns/adapter/example2/controllers/LogController';
 
 const routes = Router();
 
@@ -20,7 +21,11 @@ routes.get('/abstract-factory-1', (req: Request, res: Response) => {
 
 //adapter examples
 routes.get('/adapter-1', (req: Request, res: Response) => {
-  AdapterController.adapterExample1(req, res);
+  CalculatorController.calculate(req, res);
+});
+
+routes.get('/adapter-2', (req: Request, res: Response) => {
+  LogController.log(req, res);
 });
 
 
