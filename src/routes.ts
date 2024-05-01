@@ -1,6 +1,7 @@
 import { Request, Response, Router } from 'express';
 import FactoryController from './factory-method/index';
 import AbstractFactoryController from './abstract-factory/index';
+import AdapterController from './adapter/index';
 
 const routes = Router();
 
@@ -16,5 +17,11 @@ routes.get('/factory-method-2', (req: Request, res: Response) => {
 routes.get('/abstract-factory-1', (req: Request, res: Response) => {
     AbstractFactoryController.abstractFactoryExample1(req, res);
   });
+
+//adapter examples
+routes.get('/adapter-1', (req: Request, res: Response) => {
+  AdapterController.adapterExample1(req, res);
+});
+
 
 export default routes;
