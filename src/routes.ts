@@ -4,6 +4,7 @@ import AbstractFactoryController from './Creational patterns/abstract-factory/ex
 import { CalculatorController } from './Structural patterns/adapter/example1/controllers/CalculatorController';
 import { LogController } from './Structural patterns/adapter/example2/Controllers/LogController';
 import { BookController } from './Structural patterns/Bridge/example1';
+import { NotificationController } from './Structural patterns/Bridge/example2';
 
 const routes = Router();
 
@@ -32,6 +33,10 @@ routes.get('/adapter-2', (req: Request, res: Response) => {
 //adapter examples
 routes.get('/bridge-1', (req: Request, res: Response) => {
   BookController.openBook(req, res);
+});
+
+routes.post('/bridge-2/:type', (req: Request, res: Response) => {
+  NotificationController.sendNotification(req, res);
 });
 
 export default routes;
