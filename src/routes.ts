@@ -1,8 +1,9 @@
 import { Request, Response, Router } from 'express';
 import FactoryController from './Creational patterns/factory-method/index';
-import AbstractFactoryController from './Creational patterns/abstract-factory/index';
+import AbstractFactoryController from './Creational patterns/abstract-factory/example1/controller/AbstractFactoryController';
 import { CalculatorController } from './Structural patterns/adapter/example1/controllers/CalculatorController';
-import { LogController } from './Structural patterns/adapter/example2/controllers/LogController';
+import { LogController } from './Structural patterns/adapter/example2/Controllers/LogController';
+import { BookController } from './Structural patterns/Bridge/example1';
 
 const routes = Router();
 
@@ -28,5 +29,9 @@ routes.get('/adapter-2', (req: Request, res: Response) => {
   LogController.log(req, res);
 });
 
+//adapter examples
+routes.get('/bridge-1', (req: Request, res: Response) => {
+  BookController.openBook(req, res);
+});
 
 export default routes;

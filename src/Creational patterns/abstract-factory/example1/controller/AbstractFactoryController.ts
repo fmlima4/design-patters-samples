@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
-import { ArmyFactory } from "./example1/factories/ArmyFactory";
-import { USAFactory } from "./example1/factories/USAFactory";
-import { RussianFactory } from "./example1/factories/RussianFactory";
-import { simulateAttack, executeAction, defaultAction } from './example1/helper/Actions';
-import { ActionTypes } from './example1/helper/ActionsTypes';
+import { ArmyFactory } from "../factories/ArmyFactory";
+import { USAFactory } from "../factories/USAFactory";
+import { RussianFactory } from "../factories/RussianFactory";
+import { simulateAttack, executeAction, defaultAction } from '../helper/Actions';
+import { ActionTypes } from '../helper/ActionsTypes';
 
 class AbstractFactoryController {
     async abstractFactoryExample1(req: Request, res: Response) {
