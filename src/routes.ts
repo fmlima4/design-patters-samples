@@ -7,6 +7,7 @@ import { BookController } from './Structural patterns/Bridge/example1';
 import { NotificationController } from './Structural patterns/Bridge/example2';
 import { CoffeeController } from './Structural patterns/Decorator/example1/controllers/CoffeeController';
 import { PizzaController } from './Structural patterns/Decorator/example2/controllers/PizzaController';
+import { MealController } from './Structural patterns/Decorator/example3/controllers/MealController';
 
 const routes = Router();
 
@@ -48,6 +49,10 @@ routes.get('/decorator-1', (req: Request, res: Response) => {
 
 routes.get('/decorator-2', (req: Request, res: Response) => {
   PizzaController.preparePizza(req, res);
+});
+
+routes.get('/decorator-3', (req: Request, res: Response) => {
+  MealController.prepareMeal(req, res);
 });
 
 export default routes;

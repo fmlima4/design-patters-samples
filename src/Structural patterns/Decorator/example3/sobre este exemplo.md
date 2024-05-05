@@ -1,0 +1,12 @@
+Entities (Entidades): As entidades no nosso exemplo representam os diferentes tipos de refeições que podem ser pedidas. Temos as seguintes entidades:
+Meal (Refeição): Uma classe abstrata que define a interface base para todas as refeições. Contém métodos abstratos getName() e getPrice() que devem ser implementados pelas subclasses.
+MainCourse (Prato Principal), SideDish (Acompanhamento) e Dessert (Sobremesa): São subclasses de Meal que representam os diferentes tipos de refeições disponíveis no menu do restaurante.
+Decorators (Decoradores): Os decoradores adicionam funcionalidades adicionais às refeições básicas. Temos os seguintes decoradores:
+MealDecorator (Decorador de Refeição): Uma classe abstrata que define a interface para todos os decoradores. Estende a classe Meal e possui uma referência a uma instância de Meal.
+ProteinDecorator (Decorador de Proteína), SideDishDecorator (Decorador de Acompanhamento) e SauceDecorator (Decorador de Molho): São subclasses de MealDecorator que adicionam proteínas, acompanhamentos e molhos às refeições, respectivamente.
+Controller (Controlador): O controlador é responsável por preparar as refeições com base nas solicitações do cliente. No nosso exemplo, temos o MealController:
+O método prepareMeal() recebe solicitações para preparar uma refeição com diferentes opções de ingredientes.
+Dependendo dos parâmetros da solicitação, o controlador cria instâncias das entidades de refeição correspondentes e as envolve com os decoradores apropriados para adicionar os ingredientes selecionados.
+A refeição final é preparada com todos os ingredientes escolhidos e uma resposta é retornada ao cliente indicando que a refeição foi preparada com sucesso, juntamente com o nome da refeição e o preço total.
+Cliente (curl): No exemplo do curl, estamos simulando um cliente fazendo uma solicitação para preparar uma refeição específica com determinados ingredientes. Os parâmetros na solicitação representam as opções de ingredientes que o cliente deseja adicionar à refeição.
+Resumindo, o exemplo do padrão Decorator demonstra como adicionar funcionalidades adicionais às entidades de refeição de forma dinâmica e flexível, permitindo que os clientes personalizem suas refeições com diferentes ingredientes. Isso proporciona uma maneira elegante de estender o comportamento das entidades base sem a necessidade de criar uma hierarquia complexa de subclasses.
