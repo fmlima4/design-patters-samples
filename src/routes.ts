@@ -8,6 +8,7 @@ import { NotificationController } from './Structural patterns/Bridge/example2';
 import { CoffeeController } from './Structural patterns/Decorator/example1/controllers/CoffeeController';
 import { PizzaController } from './Structural patterns/Decorator/example2/controllers/PizzaController';
 import { MealController } from './Structural patterns/Decorator/example3/controllers/MealController';
+import { OrderController } from './Structural patterns/Facade/example1/controllers/OrderController';
 
 const routes = Router();
 
@@ -53,6 +54,11 @@ routes.get('/decorator-2', (req: Request, res: Response) => {
 
 routes.get('/decorator-3', (req: Request, res: Response) => {
   MealController.prepareMeal(req, res);
+});
+
+//facade examples
+routes.post('/facade-1', (req: Request, res: Response) => {
+  OrderController.placeOrder(req, res);
 });
 
 export default routes;
