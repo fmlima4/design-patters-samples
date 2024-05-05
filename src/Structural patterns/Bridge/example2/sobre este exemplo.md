@@ -1,0 +1,5 @@
+Abstração: A abstração será representada pela classe Notification, que define o comportamento genérico de uma mensagem a ser enviada. Esta classe possui uma referência para um objeto do tipo MessageSender, que representa a implementação específica de como a mensagem será entregue.
+
+Implementação: As implementações serão representadas pelas classes EmailSender, SmsSender e PushNotificationSender, que definem como as mensagens serão entregues através de diferentes meios de comunicação (e-mail, SMS e notificações push). Todas essas classes implementam a interface MessageSender, que define métodos para enviar mensagens.
+
+Bridge: O padrão Bridge é representado pela conexão entre a classe Notification (abstração) e as classes EmailSender, SmsSender e PushNotificationSender (implementações). A classe Notification referencia um objeto do tipo MessageSender, mas não se preocupa com os detalhes específicos de como a mensagem será entregue em cada meio de comunicação. Isso permite que novos meios de comunicação sejam adicionados sem modificar a classe Notification, mantendo-a desacoplada das implementações específicas.
