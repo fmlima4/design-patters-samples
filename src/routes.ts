@@ -6,6 +6,7 @@ import { LogController } from './Structural patterns/adapter/example2/Controller
 import { BookController } from './Structural patterns/Bridge/example1';
 import { NotificationController } from './Structural patterns/Bridge/example2';
 import { CoffeeController } from './Structural patterns/Decorator/example1/controllers/CoffeeController';
+import { PizzaController } from './Structural patterns/Decorator/example2/controllers/PizzaController';
 
 const routes = Router();
 
@@ -43,6 +44,10 @@ routes.post('/bridge-2/:type', (req: Request, res: Response) => {
 //decorator examples
 routes.get('/decorator-1', (req: Request, res: Response) => {
   CoffeeController.prepareCoffee(req, res);
+});
+
+routes.get('/decorator-2', (req: Request, res: Response) => {
+  PizzaController.preparePizza(req, res);
 });
 
 export default routes;
