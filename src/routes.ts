@@ -10,6 +10,7 @@ import { PizzaController } from './Structural patterns/Decorator/example2/contro
 import { MealController } from './Structural patterns/Decorator/example3/controllers/MealController';
 import { OrderController } from './Structural patterns/Facade/example1/controllers/OrderController';
 import { MessageController } from './Structural patterns/Facade/example2/controllers/MessageController';
+import { LogControllerSingleton } from './Creational patterns/Singleton/example1/controllers/LogController';
 
 const routes = Router();
 
@@ -64,6 +65,11 @@ routes.post('/facade-1', (req: Request, res: Response) => {
 
 routes.post('/facade-2', (req: Request, res: Response) => {
   MessageController.sendMessage(req, res);
+});
+
+//singleton examples
+routes.post('/singleton-1', (req: Request, res: Response) => {
+  LogControllerSingleton.logMessage(req, res);
 });
 
 export default routes;

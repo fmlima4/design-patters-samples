@@ -1,0 +1,5 @@
+Neste exemplo, o padrão Singleton é aplicado ao LoggerService. A classe LoggerService tem um método estático getInstance() que garante que apenas uma instância da classe será criada durante a execução do programa. Isso permite que diferentes partes do código compartilhem o mesmo objeto LoggerService e escrevam logs no mesmo arquivo.
+
+O controlador LogController é responsável por receber solicitações HTTP POST para registrar mensagens de log. Ele instancia o LoggerService usando o método getInstance() e chama o método log() para adicionar a mensagem de log ao arquivo de log.
+
+Assim, este exemplo demonstra como o padrão Singleton pode ser usado para garantir que apenas uma instância de um serviço seja criada e compartilhada entre diferentes partes de uma aplicação, garantindo consistência e economia de recursos.
