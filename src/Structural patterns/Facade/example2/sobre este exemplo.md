@@ -1,0 +1,1 @@
+Neste exemplo, o padrão Facade é aplicado novamente no controlador MessageController. O controlador atua como uma fachada para abstrair a complexidade dos serviços de busca de usuário e envio de mensagem, permitindo que o cliente envie mensagens de forma fácil e intuitiva, fornecendo apenas informações básicas como remetente, destinatário e conteúdo da mensagem.
