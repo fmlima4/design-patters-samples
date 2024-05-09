@@ -1,0 +1,5 @@
+Neste exemplo, introduzimos um novo serviço chamado DocumentService, que é um Singleton responsável por gerenciar a criação do protótipo de documento. O método getInstance() garante que apenas uma instância de DocumentService seja criada durante a execução do programa.
+
+O método getDocumentPrototype() do DocumentService retorna uma instância do protótipo de documento. O controlador DocumentController usa este método para obter o protótipo de documento e, em seguida, atualiza seu conteúdo com base no corpo da solicitação. Em seguida, clona o protótipo para criar um novo documento com o mesmo conteúdo atualizado.
+
+Dessa forma, incorporamos o padrão Singleton para garantir que apenas uma instância do serviço de documentos seja criada e compartilhada entre as partes do sistema que precisam criar documentos com base em protótipos. Isso ajuda a economizar recursos e manter a consistência na criação de documentos.
