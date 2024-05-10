@@ -12,6 +12,7 @@ import { OrderController } from './Structural patterns/Facade/example1/controlle
 import { MessageController } from './Structural patterns/Facade/example2/controllers/MessageController';
 import { LogControllerSingleton } from './Creational patterns/Singleton/example1/controllers/LogController';
 import { DocumentController } from './Creational patterns/Prototype/example 1/controllers/DocumentController';
+import { ReportController } from './Creational patterns/Prototype/example2/controllers/ReportController';
 
 const routes = Router();
 
@@ -76,6 +77,10 @@ routes.post('/singleton-1', (req: Request, res: Response) => {
 //prototype examples
 routes.post('/prototype-1', (req: Request, res: Response) => {
   DocumentController.createDocument(req, res);
+});
+
+routes.post('/prototype-2', (req: Request, res: Response) => {
+  ReportController.createReport(req, res);
 });
 
 export default routes;
