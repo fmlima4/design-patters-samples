@@ -15,6 +15,8 @@ import { DocumentController } from './Creational patterns/Prototype/example 1/co
 import { ReportController } from './Creational patterns/Prototype/example2/controllers/ReportController';
 import { LightController } from './Behavioral patterns/Command/example1/controllers/LightController';
 import { CommandOrderController } from './Behavioral patterns/Command/example2/controllers/OrderController';
+import { IteratorBookController } from './Behavioral patterns/Iterator/example1/controllers/BookController';
+import { MusicController } from './Behavioral patterns/Iterator/example2/controllers/MusicController';
 
 
 const routes = Router();
@@ -98,5 +100,20 @@ routes.get('/command-1', (req: Request, res: Response) => {
 routes.get('/command-2', (req: Request, res: Response) => {
   orderController.handleRequest(req, res);
 });
+
+
+//iterator examples
+const bookController = new IteratorBookController();
+const musicController  = new MusicController();
+
+routes.get('/iterator-1', (req: Request, res: Response) => {
+  bookController.getBooks(req, res);
+});
+
+routes.get('/iterator-2', (req: Request, res: Response) => {
+  musicController.getMusic(req, res);
+});
+
+
 
 export default routes;
