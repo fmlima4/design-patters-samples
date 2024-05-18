@@ -14,6 +14,7 @@ import { LogControllerSingleton } from './Creational patterns/Singleton/example1
 import { DocumentController } from './Creational patterns/Prototype/example 1/controllers/DocumentController';
 import { ReportController } from './Creational patterns/Prototype/example2/controllers/ReportController';
 import { LightController } from './Behavioral patterns/Command/example1/controllers/LightController';
+import { CommandOrderController } from './Behavioral patterns/Command/example2/controllers/OrderController';
 
 
 const routes = Router();
@@ -87,9 +88,15 @@ routes.post('/prototype-2', (req: Request, res: Response) => {
 
 //behavioral examples
 const lightController = new LightController();
+const orderController = new CommandOrderController();
+
 
 routes.get('/command-1', (req: Request, res: Response) => {
   lightController.handleRequest(req, res);
+});
+
+routes.get('/command-2', (req: Request, res: Response) => {
+  orderController.handleRequest(req, res);
 });
 
 export default routes;
