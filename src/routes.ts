@@ -20,6 +20,7 @@ import { MusicController } from './Behavioral patterns/Iterator/example2/control
 import { ObserverNotificationController } from './Behavioral patterns/Observer/example1/controllers/NotificationController';
 import { TemperatureController } from './Behavioral patterns/Observer/example2/controllers/TemperatureController';
 import { PaymentController } from './Behavioral patterns/Template Method/example1/controllers/PaymentController';
+import { TemplateReportController } from './Behavioral patterns/Template Method/example2/controllers/ReportController';
 
 
 const routes = Router();
@@ -146,9 +147,15 @@ routes.post('/observer-2-3', (req: Request, res: Response) => {
 
 //template examples
 const paymentController = new PaymentController();
+const reportController = new TemplateReportController();
+
 
 routes.post('/template-1', (req: Request, res: Response) => {
   paymentController.processPayment(req, res);
+});
+
+routes.post('/template-2', (req: Request, res: Response) => {
+  reportController.generateReport(req, res);
 });
 
 
