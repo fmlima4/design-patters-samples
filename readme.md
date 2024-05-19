@@ -32,6 +32,10 @@ Cada padrão de design está localizado em sua própria pasta dentro do diretór
 
 Sinta-se à vontade para explorar os exemplos e experimentar com eles em seu próprio código!
 
+para testar os exemplos disponibilizados basta rodar: `yarn && yarn dev`
+
+tem um arquivo na pasta routes_example onde estao as chamadas de exemplo para cada padrão de design assim eles podem ser testados via postman por exemplo.
+
 ## Contribuição
 
 Contribuições são bem-vindas! Se você deseja adicionar um novo padrão de design, aprimorar um exemplo existente ou corrigir algum problema, sinta-se à vontade para enviar uma solicitação pull. Certifique-se de seguir as diretrizes de contribuição do projeto.
