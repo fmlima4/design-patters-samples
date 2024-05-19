@@ -18,6 +18,8 @@ import { CommandOrderController } from './Behavioral patterns/Command/example2/c
 import { IteratorBookController } from './Behavioral patterns/Iterator/example1/controllers/BookController';
 import { MusicController } from './Behavioral patterns/Iterator/example2/controllers/MusicController';
 import { ObserverNotificationController } from './Behavioral patterns/Observer/example1/controllers/NotificationController';
+import { TemperatureController } from './Behavioral patterns/Observer/example2/controllers/TemperatureController';
+import { PaymentController } from './Behavioral patterns/Template Method/example1/controllers/PaymentController';
 
 
 const routes = Router();
@@ -126,6 +128,27 @@ routes.post('/observer-1-2', (req: Request, res: Response) => {
 });
 routes.post('/observer-1-3', (req: Request, res: Response) => {
   notificationController.removeObserver(req, res);
+});
+
+const temperatureController = new TemperatureController();
+
+routes.post('/observer-2', (req: Request, res: Response) => {
+  temperatureController.setTemperature(req, res);
+});
+
+routes.post('/observer-2-2', (req: Request, res: Response) => {
+  temperatureController.addObserver(req, res);
+});
+
+routes.post('/observer-2-3', (req: Request, res: Response) => {
+  temperatureController.removeObserver(req, res);
+});
+
+//template examples
+const paymentController = new PaymentController();
+
+routes.post('/template-1', (req: Request, res: Response) => {
+  paymentController.processPayment(req, res);
 });
 
 
