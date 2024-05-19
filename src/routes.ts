@@ -17,6 +17,7 @@ import { LightController } from './Behavioral patterns/Command/example1/controll
 import { CommandOrderController } from './Behavioral patterns/Command/example2/controllers/OrderController';
 import { IteratorBookController } from './Behavioral patterns/Iterator/example1/controllers/BookController';
 import { MusicController } from './Behavioral patterns/Iterator/example2/controllers/MusicController';
+import { ObserverNotificationController } from './Behavioral patterns/Observer/example1/controllers/NotificationController';
 
 
 const routes = Router();
@@ -114,6 +115,18 @@ routes.get('/iterator-2', (req: Request, res: Response) => {
   musicController.getMusic(req, res);
 });
 
+//observer examples
+const notificationController = new ObserverNotificationController();
+
+routes.post('/observer-1', (req: Request, res: Response) => {
+  notificationController.sendNotification(req, res);
+});
+routes.post('/observer-1-2', (req: Request, res: Response) => {
+  notificationController.addObserver(req, res);
+});
+routes.post('/observer-1-3', (req: Request, res: Response) => {
+  notificationController.removeObserver(req, res);
+});
 
 
 export default routes;
