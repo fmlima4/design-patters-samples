@@ -14,8 +14,17 @@ Atualmente, este repositório inclui exemplos para os seguintes padrões de desi
 
 - [x] Factory 
 - [x] Abstract Factory Method
-- [ ] Observer
-- [ ] Adicionar mais conforme o desenvolvimento continua...
+- [x] Adapter
+- [x] Bridge
+- [x] Decorator
+- [x] Facade
+- [x] Singleton
+- [x] Prototype
+- [x] Command
+- [x] Iterator
+- [x] Observer
+- [x] Template method
+- [ ] O desenvolvimento continua...
 
 ## Como Usar
 
