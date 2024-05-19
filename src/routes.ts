@@ -21,6 +21,7 @@ import { ObserverNotificationController } from './Behavioral patterns/Observer/e
 import { TemperatureController } from './Behavioral patterns/Observer/example2/controllers/TemperatureController';
 import { PaymentController } from './Behavioral patterns/Template Method/example1/controllers/PaymentController';
 import { TemplateReportController } from './Behavioral patterns/Template Method/example2/controllers/ReportController';
+import { ConfigController } from './Creational patterns/Singleton/example2/controllers/ConfigController';
 
 
 const routes = Router();
@@ -81,6 +82,14 @@ routes.post('/facade-2', (req: Request, res: Response) => {
 //singleton examples
 routes.post('/singleton-1', (req: Request, res: Response) => {
   LogControllerSingleton.logMessage(req, res);
+});
+
+routes.post('/singleton-2', (req: Request, res: Response) => {
+  ConfigController.setConfig(req, res);
+});
+
+routes.post('/singleton-2-2/:key', (req: Request, res: Response) => {
+  ConfigController.getConfig(req, res);
 });
 
 //prototype examples
